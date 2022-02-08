@@ -1,0 +1,9 @@
+{% if latest_proyecto_list %}
+    <ul> 
+        {% for proyecto in latest_proyecto_list %}
+            <li><a href={% url 'polls:detalle' proyecto.id%}>{{proyecto.nombre_text}}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No hay proyectos visibles.</p>
+{% endif %}

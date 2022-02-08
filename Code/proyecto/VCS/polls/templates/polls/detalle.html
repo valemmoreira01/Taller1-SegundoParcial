@@ -1,0 +1,6 @@
+<h1>{{proyecto.nombre_text}}</h1>
+<ul>
+    {% for actividad in proyecto.actividad_set.all %}
+        <li>{{actividad.nombre_actividad}}</li>
+    {% endfor %}
+</ul>
